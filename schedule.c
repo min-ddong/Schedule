@@ -85,12 +85,12 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 {
 	schedInfo_t* schedPtr;
 	
-	
-	
-	//error handler
-
+	//error handler //이상한 값 들어왔나 확인  
+	if(name==NULL || place==NULL || type>6 ||type<0 || month<1 || month>12 || day<1 || day>31 )
+	return NULL;
 	//allocate memory and set the member variables
 	//info에 저장 
+	schedPtr = malloc(sizeof(schedInfo_t));
 	
 	return (void*)schedPtr;
 }
