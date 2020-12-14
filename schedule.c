@@ -105,29 +105,29 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 //get month information from the scheduler info structure
 float sched_getMonth(void* obj)
 {
-   return ((schedInfo*)obj)->month;
+   return ((schedInfo_t*)obj)->month;
 }
 
 
 //get type information from the scheduler info structure
 int sched_getType(void* obj)
 {
-   return ((schedInfo*)obj)->type;
+   return ((schedInfo_t*)obj)->type;
 }
 
 char* sched_getPlace(void* obj)
 {
-   return ((schedInfo*)obj)->place;
+   return ((schedInfo_t*)obj)->place;
 }
 
 char* sched_getName(void* obj)
 {
-   return ((schedInfo*)obj)->name;
+   return ((schedInfo_t*)obj)->name;
 }
 
 int sched_getDay(void* obj)
 {
-   return ((schedInfo*)obj)->day;
+   return ((schedInfo_t*)obj)->day;
 }
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
