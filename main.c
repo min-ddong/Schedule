@@ -24,7 +24,15 @@ int main(int argc, char *argv[]) {
 	int cnt;
 	
 	//1. FILE pointer open & error handling
-	//fill code here ----
+	//fill code here ---- //dat파일 불러내서 읽어들이기
+	int main() {
+		FILE *fp;
+		if ((fp = fopen("scheduler.dat", "r")) == NULL) {
+			printf("파일 읽기 오류!\n");
+			return 0;
+		}
+		
+	}
 	
 	//initializing the list
 	printf("Reading the data files... \n");
