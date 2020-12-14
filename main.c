@@ -83,27 +83,30 @@ int main(int argc, char *argv[]) {
 		
 		//4. get option from keyboard
 		//fill code here ----
-		scanf("%d", &option); } }
+		scanf("%d", &option); 
 		
 		
-	/*	switch(option)
+		switch(option)
 		{
 			case 1: //print all the schedules
 				printf("printing all the schedules in the scheduler.....\n\n\n");
 				
 				ndPtr = list;
+				cnt = 1;
 				while (list_isEndNode(ndPtr) == 0)
 				{
 					//file code here -- print count and each scheduling info element
+					printf("%d %s %s %d %d %d\n", cnt, sched_getName(ndPtr), sched_getPlace(ndPtr), sched_getType(ndPtr), sched_getMonth(ndPtr), sched_getDay(ndPtr));   
 					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
-					schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
+	                schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
 					
 					//fill code this part - end
+					cnt++;
 				}
 				
 				break;
-				
-			case 2:
+			} }}
+		/*	case 2:
 				printf("which month ? : ");
 				scanf("%i", &month);
 				
@@ -173,5 +176,5 @@ int main(int argc, char *argv[]) {
 	} 
 	
 	return 0;
-} */
-
+} 
+*/

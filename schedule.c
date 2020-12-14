@@ -86,11 +86,19 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 	schedInfo_t* schedPtr;
 	
 	//error handler //이상한 값 들어왔나 확인  
-	if(name==NULL || place==NULL || type>6 ||type<0 || month<1 || month>12 || day<1 || day>31 )
+	if(name == NULL || place == NULL || type > 6 ||type < 0 || month < 1 || month > 12 || day < 1 || day > 31 )
 	return NULL;
 	//allocate memory and set the member variables
 	//info에 저장 
 	schedPtr = malloc(sizeof(schedInfo_t));
+	schedPtr->name = malloc(sizeof(char)*(strlen(name)+1));
+	schedPtr->place = malloc(sizeof(char)*(strlen(place)+1));
+	
+	strcpy(schedPtr->name, name);
+	strcpy(schedPtr->place, place);
+	schedPtr->type = type;
+	schedPtr->month = month;
+	schedPtr->day = day;
 	
 	return (void*)schedPtr;
 }
@@ -100,27 +108,32 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 //get month information from the scheduler info structure
 float sched_getMonth(void* obj)
 {
-	
+   return ((schedInfo*)obj)->month;
 }
 
 
 //get type information from the scheduler info structure
 int sched_getType(void* obj)
 {
-	
+   return ((schedInfo*)obj)->type;
 }
 
-
-
-//get place string information from the scheduler info structure
 char* sched_getPlace(void* obj)
 {
-
+   return ((schedInfo*)obj)->place;
 }
 
+char* sched_getName(void* obj)
+{
+   return ((schedInfo*)obj)->name;
+}
+
+int sched_getDay(void* obj)
+{
+   return ((schedInfo*)obj)->day;
+}
 //convert the name of the type into the enum(integer) value
 int sched_convertType(char* typeName)
 {
-	
+   
 }
-
