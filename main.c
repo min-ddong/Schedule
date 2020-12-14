@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "schedule.c"
 #include "schedule.h"
+#include "linkedList.c"
 #include "linkedList.h"
+
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -40,8 +43,8 @@ int main(int argc, char *argv[]) {
 	
 	
 	//initializing the list
-//	printf("Reading the data files... \n");
-//	list = (void*)list_genList();
+    printf("Reading the data files... \n");
+	list = (void*)list_genList();
 	
 	
 	
@@ -61,7 +64,7 @@ int main(int argc, char *argv[]) {
 	
 	//fill code here ---- close the file pointer
 	
-/*	printf("Read done! %i schedules are read\n", list_len(list));
+	printf("Read done! %i schedules are read\n", list_len(list));
 	
 	
 	//program starts
@@ -129,7 +132,7 @@ int main(int argc, char *argv[]) {
 				printf("your choice : ");
 				scanf("%s", typeName);
 				
-				if ( fill code here -- convert the type and check if the type is valid )
+				if ( /*fill code here -- convert the type and check if the type is valid*/ )
 				{
 					ndPtr = list;
 					while (list_isEndNode(ndPtr) == 0)
@@ -158,7 +161,7 @@ int main(int argc, char *argv[]) {
 		}
 		
 		
-	} */
+	} 
 	
 	return 0;
 }
