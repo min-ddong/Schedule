@@ -91,9 +91,6 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 	//allocate memory and set the member variables
 	//info¿¡ ÀúÀå 
 	schedPtr = malloc(sizeof(schedInfo_t));
-	schedPtr->name = malloc(sizeof(char)*(strlen(name)+1));
-	schedPtr->place = malloc(sizeof(char)*(strlen(place)+1));
-	
 	strcpy(schedPtr->name, name);
 	strcpy(schedPtr->place, place);
 	schedPtr->type = type;
