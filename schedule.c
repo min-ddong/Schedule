@@ -103,7 +103,7 @@ void* sched_genSchedInfo(char* name, char* place, int type, int month, int day)
 
 
 //get month information from the scheduler info structure
-float sched_getMonth(void* obj)
+int sched_getMonth(void* obj)
 {
    return ((schedInfo_t*)obj)->month;
 }

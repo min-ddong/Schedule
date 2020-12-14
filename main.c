@@ -95,13 +95,15 @@ int main(int argc, char *argv[]) {
 				cnt = 1;
 				while (list_isEndNode(ndPtr) == 0)
 				{
-					//file code here -- print count and each scheduling info element
-					printf("%d %s %s %d %d %d\n", cnt, sched_getName(ndPtr), sched_getPlace(ndPtr), sched_getType(ndPtr), sched_getMonth(ndPtr), sched_getDay(ndPtr));   
-					ndPtr = list_getNextNd(ndPtr); //get the next node from the list
-	                schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
-					
-					//fill code this part - end
-					cnt++;
+				//file code here -- print count and each scheduling info element
+               printf("%d ", ((node_t*)ndPtr)->index);
+               ndPtr = list_getNextNd(ndPtr); //get the next node from the list
+               schedInfo = list_getNdObj(ndPtr); //get the object (scheduling info)
+               printf("%s %s %d %d %d\n", sched_getName(schedInfo), sched_getPlace(schedInfo), sched_getType(schedInfo), sched_getMonth(schedInfo), sched_getDay(schedInfo));
+               
+               //fill code this part - end
+
+			
 				}
 				
 				break; }}}
