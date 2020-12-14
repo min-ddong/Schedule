@@ -104,8 +104,8 @@ int main(int argc, char *argv[]) {
 					cnt++;
 				}
 				
-				break;
-			} }}
+				break; }}}
+			
 		/*	case 2:
 				printf("which month ? : ");
 				scanf("%i", &month);
